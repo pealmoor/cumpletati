@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 5</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function validar() {
+            const respuesta = document.getElementById('respuesta').value;
+            if (respuesta === 'pedro') { // Cambia por la respuesta correcta.
+                location.href = 'fin.html';
+            } else {
+                alert('Respuesta incorrecta. Intenta de nuevo.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>COMO SE LLAMA EL HOMBRE PELIRROJO QUE TE QUIERE COMO FUTURA ESPOSA, DE LA CUAL EL CREE QUE TU ERES EL AMOR DE SU VIDA(LO ERES) Y QUE QUIERE ESTAR SIEMPRE CONTIGO PARA TODO?</h1>
+    <p>Escribe la respuesta correcta a esta última pregunta.</p>
+    <input type="text" id="respuesta">
+    <button onclick="validar()">Responder</button>
+</body>
+</html>

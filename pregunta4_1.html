@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 4_1</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function validar() {
+            const respuesta = document.getElementById('respuesta').value;
+            if (respuesta === 'culo') { // Cambia por la respuesta correcta.
+                location.href = 'pregunta5.html';
+            } else {
+                alert('Respuesta incorrecta. Intenta de nuevo.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Que parte fisica me gusta mucho de ti?</h1>
+    <p>Escribe la respuesta correcta a esta pregunta.</p>
+    <input type="text" id="respuesta">
+    <button onclick="validar()">Responder</button>
+</body>
+</html>

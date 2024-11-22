@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 4</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function validar() {
+            const respuesta = document.getElementById('respuesta').value;
+            if (respuesta === 'one direction') { // Cambia por la respuesta correcta.
+                location.href = 'pregunta4_1.html';
+            } else {
+                alert('Respuesta incorrecta. Intenta de nuevo.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Banda favorita? :O</h1>
+    <p>Escribe la respuesta correcta a esta pregunta.</p>
+    <input type="text" id="respuesta">
+    <button onclick="validar()">Responder</button>
+</body>
+</html>

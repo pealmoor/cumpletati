@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function validar(event) {
+            event.preventDefault();
+            const respuesta = document.getElementById('respuesta').value;
+            if (respuesta === '2000-05-12') { // Cambia por la fecha correcta.
+                location.href = 'pregunta2.html';
+            } else {
+                document.getElementById('error').textContent = 'Respuesta incorrecta. Intenta de nuevo.';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Pregunta 1</h1>
+        <p>¿Cuál es tu fecha de nacimiento? (Formato: AAAA-MM-DD)</p>
+        <form onsubmit="validar(event)">
+            <input type="text" id="respuesta" placeholder="XXXX-XX-XX">
+            <input type="submit" value="Responder">
+        </form>
+        <p id="error" class="error-message"></p>
+    </div>
+</body>
+</html>
