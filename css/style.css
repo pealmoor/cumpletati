@@ -5,7 +5,13 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #fbe9ff, #f9f0ff); /* Fondo suave lila claro */
+    background-color: #fbe9ff; /* Fondo base */
+    background-image: 
+        radial-gradient(circle at 10% 20%, #6a4c9c 2%, transparent 50%),
+        radial-gradient(circle at 80% 80%, #f782c2 2%, transparent 50%),
+        radial-gradient(circle at 50% 50%, #d1b3e0 5%, transparent 70%);
+    background-size: 300px 300px; /* Tamaño de las figuritas */
+    background-repeat: repeat;
     font-family: 'Arial', sans-serif;
     color: #6a4c9c; /* Texto lila principal */
 }

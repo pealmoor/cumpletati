@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pregunta 2</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <script>
-        function validar() {
+        function validar(event) {
+            event.preventDefault();
             const respuesta = document.getElementById('respuesta').value;
             if (respuesta === 'martha') { // Cambia por la respuesta correcta.
                 location.href = 'pregunta3.html';
             } else {
-                alert('Respuesta incorrecta. Intenta de nuevo.');
+                document.getElementById('error').textContent = 'Respuesta incorrecta. Intenta de nuevo.';
             }
         }
     </script>
 </head>
 <body>
-    <h1>Como se llama tú mamá?</h1>
-    <p>Escribe la respuesta correcta a esta pregunta.</p>
-    <input type="text" id="respuesta">
-    <button onclick="validar()">Responder</button>
+    <div class="container">
+        <h1>Como se llama tu mamá?</h1>
+        <p>Escribe la respuesta correcta a esta pregunta.</p>
+        <form onsubmit="validar(event)">
+            <input type="text" id="respuesta">
+            <input type="submit" value="Responder">
+        </form>
+        <p id="error" class="error-message"></p>
+    </div>
 </body>
 </html>
